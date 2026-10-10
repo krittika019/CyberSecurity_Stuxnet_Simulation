@@ -1,0 +1,32 @@
+[PASS] code runs successfully (exit 0) 
+[PASS] no network/process/ICS-protocol imports imports=['argparse', 'dataclasses', 'matplotlib', 'numpy', 'os', 'pandas', 'sys']
+[PASS] no os.system / eval / exec / popen 
+[PASS] results reproducible (identical SHA-256 across two runs) 265bf2b8ba2a3fa1
+[PASS] project results file equals fresh run 
+[PASS] no NaN in time-series CSV rows=1200
+[PASS] no NaN / empty in summary CSV 
+[PASS] four experiments present 
+[PASS] A normal stable (max dev < 5%) 1.27%
+[PASS] A: no alarms on either path (no false positives) 
+[PASS] B: target validation FAILED, controller NORMAL, no deviation 
+[PASS] B identical to A in process output 
+[PASS] C: validation PASSED, change applied, deviation > 5% 15.73%
+[PASS] C: process identical to A before activation 
+[PASS] C: operator HMI shows the anomaly (no concealment) 
+[PASS] D: HMI stays NORMAL while independent monitor flags ANOMALY 
+[PASS] D: true process identical to C (concealment alters display only) 
+[PASS] independent monitor detects C and D 
+       D post-activation: max HMI deviation 1.11% ; max monitor deviation 15.81% ; HMI flags 0 ; monitor flags 195
+[PASS] six required figures exist and are non-empty 
+[PASS] report number 1.27 equals simulation output (1.27) and appears in report text 
+[PASS] report number 15.73 equals simulation output (15.73) and appears in report text 
+[PASS] report number 1140.16 equals simulation output (1140.16) and appears in report text 
+[PASS] report number 1150.39 equals simulation output (1150.39) and appears in report text 
+[PASS] report number 999.86 equals simulation output (999.86) and appears in report text 
+[PASS] report number 195 equals simulation output (195) and appears in report text 
+[PASS] report number 56.14 equals simulation output (56.14) and appears in report text 
+[PASS] report number 1.11 equals simulation output (1.11) and appears in report text 
+[PASS] report number 15.81 equals simulation output (15.81) and appears in report text 
+[PASS] detection delay 7 steps in C and D matches report 
+
+Summary: 29/29 checks passed

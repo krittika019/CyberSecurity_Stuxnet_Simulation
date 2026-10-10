@@ -1,0 +1,5 @@
+experiment,scenario,controller_id,configuration,target_validation,controller_state,conceptual_concealment,baseline_mean_pre_activation,process_mean_post_activation,process_mean_final_50_steps,max_process_deviation_pct,max_process_temperature,steps_outside_normal_range,hmi_final_mean_10,monitor_final_mean_10,detection_threshold_pct,hmi_result,hmi_detection_delay_steps,monitor_result,monitor_detection_delay_steps,anomaly_detected_by,security_status
+A,Normal operation,CTRL-A,TARGET,NOT RUN,NORMAL,OFF,999.86,998.78,1000.39,1.27,50.15,0,997.33,997.35,5.0,NORMAL,none,NORMAL,none,none,SAFE
+B,Target validation failed,CTRL-B,NON-TARGET,FAILED,NORMAL,OFF,999.86,998.78,1000.39,1.27,50.15,0,997.33,997.35,5.0,NORMAL,none,NORMAL,none,none,SAFE
+C,Target matched + simulated manipulation,CTRL-A,TARGET,PASSED,SIMULATED CHANGE,OFF,999.86,1140.16,1150.39,15.73,56.14,195,1147.33,1147.35,5.0,ANOMALY VISIBLE,7,ANOMALY,7,HMI path and independent monitor,SIMULATED ANOMALY
+D,Target matched + manipulation + concealment,CTRL-A,TARGET,PASSED,SIMULATED CHANGE,ON,999.86,1140.16,1150.39,15.73,56.14,195,994.87,1147.35,5.0,NORMAL,none,ANOMALY,7,independent monitor only,SIMULATED ANOMALY
