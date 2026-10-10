@@ -8,12 +8,12 @@ A small, benign teaching simulation for the CA-2 Stuxnet case study (Group 2). I
 
 | Folder | Contents |
 |---|---|
-| [01_Code/](01_Code/) | The simulation script, `requirements.txt`, and a [README](01_Code/README.md) with the full model description |
-| [02_Results/](02_Results/) | `simulation_results.csv` (data for every step) and `simulation_summary.csv` (metrics for each experiment) |
-| [03_Figures/](03_Figures/) | Figures 1–7: architecture, normal operation, target validation, process comparison, HMI vs monitor, detection, dashboard |
-| [04_Report/](04_Report/) | Sections to add to the case-study report: method, implementation details, results and discussion |
-| [05_Presentation/](05_Presentation/) | A short script for presenting the simulation (30–45 s) |
-| [06_Validation/](06_Validation/) | An automated validation script, the checklist, and the saved output from the last run |
+| [01_Code/](Stuxnet_CyberPhysical_Simulation/01_Code/) | The simulation script, `requirements.txt`, and a [README](Stuxnet_CyberPhysical_Simulation/01_Code/README.md) with the full model description |
+| [02_Results/](Stuxnet_CyberPhysical_Simulation/02_Results/) | `simulation_results.csv` (data for every step) and `simulation_summary.csv` (metrics for each experiment) |
+| [03_Figures/](Stuxnet_CyberPhysical_Simulation/03_Figures/) | Figures 1–7: architecture, normal operation, target validation, process comparison, HMI vs monitor, detection, dashboard |
+| [04_Report/](Stuxnet_CyberPhysical_Simulation/04_Report/) | Sections to add to the case-study report: method, implementation details, results and discussion |
+| [05_Presentation/](Stuxnet_CyberPhysical_Simulation/05_Presentation/) | A short script for presenting the simulation (30–45 s) |
+| [06_Validation/](Stuxnet_CyberPhysical_Simulation/06_Validation/) | An automated validation script, the checklist, and the saved output from the last run |
 
 ## Requirements
 
@@ -24,10 +24,10 @@ No internet connection is needed at run time.
 
 ## How to run
 
-From the project root:
+From the repository root:
 
 ```bash
-cd 01_Code
+cd Stuxnet_CyberPhysical_Simulation/01_Code
 pip install -r requirements.txt
 python stuxnet_ics_concept_simulation.py
 ```
@@ -58,7 +58,7 @@ These are the results for seed 42, taken from `02_Results/simulation_summary.csv
 ## Validation
 
 ```bash
-python 06_Validation/run_validation.py
+python Stuxnet_CyberPhysical_Simulation/06_Validation/run_validation.py
 ```
 
 The script runs the simulation in a temporary folder and checks that:
@@ -69,8 +69,8 @@ The script runs the simulation in a temporary folder and checks that:
 - all figures exist
 - the numbers quoted in the report match the simulation output
 
-The last run passed all 29 checks (see [06_Validation/validation_output.txt](06_Validation/validation_output.txt)). One check compares the saved results with a fresh run using seed 42, so run the simulation with the default seed before validating.
+The last run passed all 29 checks (see [06_Validation/validation_output.txt](Stuxnet_CyberPhysical_Simulation/06_Validation/validation_output.txt)). One check compares the saved results with a fresh run using seed 42, so run the simulation with the default seed before validating.
 
 ## Scope
 
-The simulation illustrates general security principles discussed in the report. It says nothing about how Stuxnet actually behaved physically, what happened at any real facility, or historical damage estimates. See [01_Code/README.md](01_Code/README.md) for the model equations and the full list of what is deliberately left out.
+The simulation illustrates general security principles discussed in the report. It says nothing about how Stuxnet actually behaved physically, what happened at any real facility, or historical damage estimates. See [01_Code/README.md](Stuxnet_CyberPhysical_Simulation/01_Code/README.md) for the model equations and the full list of what is deliberately left out.
